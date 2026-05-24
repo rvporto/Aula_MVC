@@ -7,10 +7,9 @@ repos:
         language: system
         types: [python]
         args: [
-          "rn", #only display the error code and message
+          "--msg-template={msg_id}:{line}:{column}: {msg} ({symbol})", # exibe o código do erro e a mensagem
           "-sn", #don't display the name of the checker
           "--rcfile=.pylintrc", #link to the pylint configuration file
           "--load-plugins=pylint.extensions.docparams", #load an extension
         ]
-
- 
+        
